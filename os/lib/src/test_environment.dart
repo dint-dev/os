@@ -21,20 +21,16 @@ import '../os.dart';
 /// A test environment.
 ///
 /// You can get the current test environment with [TestEnvironment.current].
-/// It will return null if the code is not running inside a test. Alternatively,
-/// you can use [isRunningInTest].
+/// It will return null if the code is not running inside a test. If you just
+/// need to know whether a test is running, use [isRunningInTest].
 ///
 /// This does NOT require the package to depend on
-/// [package:test](https://pub.dev/packages/test). You can use the package
-/// without worrying on code size.
+/// [package:test](https://pub.dev/packages/test).
 abstract class TestEnvironment {
   /// Expando for optimizing [current].
   static final _expando = Expando<TestEnvironment>();
 
   /// Returns current test environment.
-  ///
-  /// Returns null unless called inside a test (`test(...)`) or a test group
-  /// (`group(...)`).
   ///
   /// ## Example
   /// ```
@@ -43,6 +39,17 @@ abstract class TestEnvironment {
   /// void doSomething() {
   ///   TestEnvironment.current?.addTearDown(() async {
   ///     // ...
+  ///   });
+  /// }
+  /// ```
+  ///
+  /// You don't need any changes in test files:
+  /// ```
+  /// import 'package:test/test.dart';
+  ///
+  /// void main() {
+  ///   test('doSomething()', () {
+  ///     doSomething();
   ///   });
   /// }
   /// ```
@@ -69,23 +76,6 @@ abstract class TestEnvironment {
 
   /// Adds a function that will be run when the test (or the test group) is torn
   /// down.
-  ///
-  /// ## Example
-  /// ```dart
-  /// import 'package:os/os.dart';
-  ///
-  /// void doSomething() {
-  ///   // ...
-  ///
-  ///   // If the method runs in a test environment, add a tear down function
-  ///   // that will be run after the test.
-  ///   TestEnvironment.current?.addTearDown(() {
-  ///     // ...
-  ///   });
-  ///
-  ///   // ...
-  /// }
-  /// ```
   void addTearDown(FutureOr Function() f);
 
   /// Signals that the test is still alive.

@@ -11,7 +11,7 @@ The package is designed to work in all platforms, including browsers.
 In pubspec.yaml:
 ```yaml
 dependencies:
-  os_cpu: ^1.0.0
+  os_cpu: ^1.0.1
 ```
 
 ## 2.Use

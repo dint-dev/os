@@ -1,7 +1,7 @@
 name: os
 description: API for information about the operating system and the environment. Works in all
   platforms, including browsers.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/dint-dev/os
 
 environment:

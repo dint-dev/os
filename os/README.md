@@ -30,21 +30,21 @@ void main() {
 ```
 
 ## Detect development/production environment
-* [isRunningInDebugMode](https://pub.dev/documentation/os/latest/os/isRunningInDebugMode.html)
+* [isRunningInDebugMode](https://pub.dev/documentation/os/latest/os/isRunningInDebugMode-constant.html)
     * Is the code running in debug mode?
-* [isRunningInProfileMode](https://pub.dev/documentation/os/latest/os/isRunningInProfileMode.html)
+* [isRunningInProfileMode](https://pub.dev/documentation/os/latest/os/isRunningInProfileMode-constant.html)
     * Is the code running in a profile mode?
-* [isRunningInReleaseMode](https://pub.dev/documentation/os/latest/os/isRunningInReleaseMode.html)
+* [isRunningInReleaseMode](https://pub.dev/documentation/os/latest/os/isRunningInReleaseMode-constant.html)
     * Is the code running in a release mode?
 * [isRunningInTest](https://pub.dev/documentation/os/latest/os/isRunningInTest.html)
     * Is the code running in a test?
 
 ## Determine platform properties
-* [isRunningInFlutter](https://pub.dev/documentation/os/latest/os/isRunningInFlutter.html)
+* [isRunningInFlutter](https://pub.dev/documentation/os/latest/os/isRunningInFlutter-constant.html)
     * Is the code running in a Flutter application?
-* [isRunningInJs](https://pub.dev/documentation/os/latest/os/isRunningInJs.html)
+* [isRunningInJs](https://pub.dev/documentation/os/latest/os/isRunningInJs-constant.html)
     * Is the code running in a Javascript engine?
-* [isRunningInWeb](https://pub.dev/documentation/os/latest/os/isRunningInWeb.html)
+* [isRunningInWeb](https://pub.dev/documentation/os/latest/os/isRunningInWeb-constant.html)
     * Is the code running in a web browser?
 
 ## Add test tear down functions

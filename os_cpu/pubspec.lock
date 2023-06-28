@@ -180,9 +180,10 @@ packages:
   os:
     dependency: "direct main"
     description:
-      path: "../os"
-      relative: true
-    source: path
+      name: os
+      sha256: "77a2442820350454a28439624c91dee368ca2661c8c9c72436de3389a5b3a69c"
+      url: "https://pub.dev"
+    source: hosted
     version: "1.0.0"
   package_config:
     dependency: transitive
